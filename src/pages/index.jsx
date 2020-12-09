@@ -28,9 +28,15 @@ const Content = styled['div']`
     text-align : center;
 `
 
-const index = () => {
+const index = ({ passThemeToApp }) => {
     const toggleHander = e => {
+        const isToggle = e.target.checked
 
+        if (isToggle) {
+            passThemeToApp('dark')
+        } else {
+            passThemeToApp('light')
+        }
     }
 
     return (
