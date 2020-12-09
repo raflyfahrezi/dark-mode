@@ -15,6 +15,8 @@ const Container = styled['div']`
     place-items : center;
 
     background-color : ${ props => props['theme']['color']['primary'] };
+
+    transition : 0.5s;
 `
 
 const Content = styled['div']`
