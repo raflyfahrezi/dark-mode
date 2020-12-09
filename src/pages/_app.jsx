@@ -1,9 +1,15 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import '../styles/globals.css'
+import GlobalStyles from '../styles/global-styles'
 
 const MyApp = ({ Component, pageProps }) => {
-    return <Component {...pageProps} />
+    return (
+        <ThemeProvider>
+            <GlobalStyles/>
+            <Component {...pageProps} />
+        </ThemeProvider>
+    )
 }
 
 export default MyApp
