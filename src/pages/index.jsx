@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Header from '../component/typography/header'
 import Paragraph from '../component/typography/paragraph'
 import ToggleSwitch from '../component/toggle-switch/toggle-switch'
 
@@ -35,6 +36,7 @@ const index = () => {
     return (
         <Container>
             <Content>
+                <Header>Welcome</Header>
                 <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum fugit veniam tempora beatae voluptate odit quasi obcaecati omnis in?</Paragraph>
                 <ToggleSwitch toggleHander={ e => toggleHander(e) }/>
             </Content>
