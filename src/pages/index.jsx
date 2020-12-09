@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Paragraph from '../component/typography/paragraph'
 import ToggleSwitch from '../component/toggle-switch/toggle-switch'
 
 const Container = styled['div']`
@@ -15,6 +16,17 @@ const Container = styled['div']`
     background-color : ${ props => props['theme']['color']['primary'] };
 `
 
+const Content = styled['div']`
+    width : 100%;
+    max-width : 600px;
+
+    display : grid;
+    place-items : center;
+    gap : 30px;
+
+    text-align : center;
+`
+
 const index = () => {
     const toggleHander = e => {
 
@@ -22,9 +34,10 @@ const index = () => {
 
     return (
         <Container>
-            <div>
+            <Content>
+                <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum fugit veniam tempora beatae voluptate odit quasi obcaecati omnis in?</Paragraph>
                 <ToggleSwitch toggleHander={ e => toggleHander(e) }/>
-            </div>
+            </Content>
         </Container>
     )
 }
